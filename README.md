@@ -10,11 +10,12 @@ It is a tool designed to detect memory safety errors like use-after-free and out
 The following args were used to build this chromium:
 
 ```
-target_os="android"
-  target_cpu="x86"            
-  is_debug=false                 
-  symbol_level=1                 
-  enable_gwp_asan=true           
+target_os = "android"
+target_cpu = "x86"
+use_remoteexec = false
+is_component_build = false                
+symbol_level=1                 
+enable_gwp_asan=true           
 ```
 
 **Note:** Even when GWP‑ASan is compiled in, Chrome only samples allocations when you enable the feature.
